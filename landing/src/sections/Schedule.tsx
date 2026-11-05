@@ -42,11 +42,6 @@ export default function Schedule() {
               </ScrollReveal>
             ))}
           </dl>
-          <ScrollReveal delay={0.35}>
-            <p className="mt-12 max-w-[52ch] text-[18px] leading-[1.55]">
-              Na véspera de cada consulta, o app manda um lembrete para o seu e-mail.
-            </p>
-          </ScrollReveal>
         </div>
       </div>
     </section>

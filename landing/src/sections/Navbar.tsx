@@ -1,4 +1,4 @@
-import { APP_URL } from './links'
+import { REPO_URL } from './links'
 
 const links = [
   { label: 'Raça', href: '#raca' },
@@ -22,10 +22,10 @@ export default function Navbar() {
             ))}
           </ul>
           <a
-            href={APP_URL}
+            href={REPO_URL}
             className="inline-flex min-h-[44px] items-center bg-[var(--accent)] px-5 text-[15px] font-semibold text-white transition-colors hover:bg-[var(--accent-hover)] active:translate-y-px"
           >
-            Abrir o app
+            Código no GitHub
           </a>
         </div>
       </nav>

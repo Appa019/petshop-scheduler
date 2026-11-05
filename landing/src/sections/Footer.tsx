@@ -1,5 +1,5 @@
 import ScrollReveal from '../components/ScrollReveal'
-import { APP_URL, REPO_URL } from './links'
+import { REPO_URL } from './links'
 
 export default function Footer() {
   return (
@@ -8,18 +8,18 @@ export default function Footer() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <ScrollReveal>
             <h2 className="text-[clamp(36px,5vw,72px)] font-extrabold leading-[1.02] tracking-[-0.02em]">
-              Teste com o seu pet
+              O código está aberto
             </h2>
             <p className="mt-6 max-w-[44ch] text-[18px] leading-[1.55]">
-              Crie uma conta, envie uma foto e veja o cronograma montado em seguida.
+              App, funções do Supabase, migrations e prompts estão no repositório, com licença MIT.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.08}>
             <a
-              href={APP_URL}
+              href={REPO_URL}
               className="inline-flex min-h-[52px] items-center bg-[var(--accent)] px-7 text-[18px] font-semibold text-white transition-colors hover:bg-[var(--accent-hover)] active:translate-y-px"
             >
-              Abrir o app
+              Ver o código no GitHub
             </a>
           </ScrollReveal>
         </div>

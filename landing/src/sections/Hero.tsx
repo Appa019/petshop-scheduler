@@ -1,5 +1,5 @@
 import ScrollReveal from '../components/ScrollReveal'
-import { APP_URL, REPO_URL } from './links'
+import { REPO_URL } from './links'
 
 // The four steps of the real sign-up flow, in the order the app shows them
 const screens = [
@@ -35,14 +35,14 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap items-center gap-x-8 gap-y-4 lg:col-span-5 lg:justify-end">
             <a
-              href={APP_URL}
+              href={REPO_URL}
               className="inline-flex min-h-[52px] items-center bg-[var(--accent)] px-7 text-[18px] font-semibold text-white transition-colors hover:bg-[var(--accent-hover)] active:translate-y-px"
             >
-              Cadastrar meu pet
-            </a>
-            <a href={REPO_URL} className="text-[18px] font-semibold text-[var(--accent)] underline underline-offset-4 hover:decoration-2">
               Ver o código no GitHub
             </a>
+            <p className="text-[16px] leading-[1.5] text-[var(--muted)] lg:basis-full lg:text-right">
+              O app foi um protótipo e o backend não está mais no ar.
+            </p>
           </div>
         </div>
 

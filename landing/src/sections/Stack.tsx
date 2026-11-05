@@ -2,12 +2,11 @@ import ScrollReveal from '../components/ScrollReveal'
 import { REPO_URL } from './links'
 
 const stack = [
-  { term: 'App', detail: 'React 19, Vite e React Router, publicado na Vercel em /app' },
+  { term: 'App', detail: 'React 19, Vite e React Router, publicado na Vercel' },
   { term: 'API', detail: 'Supabase Edge Functions em Deno e TypeScript' },
   { term: 'Dados', detail: 'Postgres com Row Level Security: cada tutor só lê os próprios pets' },
   { term: 'Login', detail: 'Supabase Auth com confirmação por e-mail' },
   { term: 'IA', detail: 'OpenAI Responses API, com visão para a foto e texto para o plano' },
-  { term: 'Lembretes', detail: 'Função diária no pg_cron e envio por SMTP' },
 ]
 
 interface StackProps {
