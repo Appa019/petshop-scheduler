@@ -1,73 +1,44 @@
-import { Github, Heart } from 'lucide-react'
+import ScrollReveal from '../components/ScrollReveal'
+import { REPO_URL } from './links'
 
-const footerLinks = [
-  { label: 'GitHub', href: 'https://github.com/Appa019/PetShop_Scheduler', external: true },
-  { label: 'Funcionalidades', href: '#features', external: false },
-  { label: 'Como Funciona', href: '#how-it-works', external: false },
-  { label: 'Tecnologias', href: '#tech-stack', external: false },
-]
-
-// Rodapé minimalista com logo, links e copyright
 export default function Footer() {
-  const handleNav = (href: string) => {
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
-    <footer className="border-t border-[#EDE8F5]" style={{ background: '#FAF8F5' }}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-
-          {/* Logo e tagline */}
-          <div className="flex flex-col gap-1">
+    <footer className="mt-32 pb-10 lg:mt-48">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <ScrollReveal>
+            <h2 className="text-[clamp(36px,5vw,72px)] font-extrabold leading-[1.02] tracking-[-0.02em]">
+              O código está aberto
+            </h2>
+            <p className="mt-6 max-w-[44ch] text-[18px] leading-[1.55]">
+              App, funções do Supabase, migrations e prompts estão no repositório, com licença MIT.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.08}>
             <a
-              href="#"
-              onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-              className="flex items-center gap-2 font-display font-bold text-lg text-[#7B5EA7] hover:text-[#5A3E7A] transition-colors w-fit"
+              href={REPO_URL}
+              className="inline-flex min-h-[52px] items-center bg-[var(--accent)] px-7 text-[18px] font-semibold text-white transition-colors hover:bg-[var(--accent-hover)] active:translate-y-px"
             >
-              <img src="/logo_pata.avif" alt="" aria-hidden="true" className="w-6 h-6" />
-              <span className="font-display">8Patas</span>
+              Ver o código no GitHub
             </a>
-            <p className="text-xs text-[#7A7090] pl-8">Gestão veterinária com inteligência artificial</p>
-          </div>
-
-          {/* Links */}
-          <nav>
-            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
-              {footerLinks.map(link => (
-                <li key={link.label}>
-                  {link.external ? (
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-sm text-[#7A7090] hover:text-[#2A2140] transition-colors"
-                    >
-                      <Github size={13} />
-                      {link.label}
-                    </a>
-                  ) : (
-                    <button
-                      onClick={() => handleNav(link.href)}
-                      className="text-sm text-[#7A7090] hover:text-[#2A2140] transition-colors"
-                    >
-                      {link.label}
-                    </button>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
+          </ScrollReveal>
         </div>
 
-        {/* Divisor e copyright */}
-        <div className="mt-8 pt-6 border-t border-[#EDE8F5] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-[#7A7090]">
-            © 2026 8Patas Petshop. Todos os direitos reservados.
+        <p aria-hidden="true" className="mt-24 select-none text-[clamp(88px,24vw,360px)] font-extrabold leading-[0.85] tracking-[-0.02em]">
+          8Patas
+        </p>
+
+        <div className="mt-10 flex flex-col gap-3 text-[15px] leading-[1.5] text-[var(--muted)] lg:flex-row lg:justify-between lg:gap-10">
+          <p>
+            <a href={REPO_URL} className="text-[var(--ink)] underline underline-offset-4">Código no GitHub</a>
+            {' · '}Projeto de intraempreendedorismo, FGV
           </p>
-          <p className="text-xs text-[#7A7090] flex items-center gap-1.5">
-            Feito com <Heart size={11} style={{ color: '#EF4444' }} aria-label="carinho" /> para tutores e pets
+          <p className="lg:text-right">
+            As telas mostram o app com um pet de exemplo. Foto: “Caramelo dog 59”, de Vitor Coelho Nisida,{' '}
+            <a href="https://commons.wikimedia.org/wiki/File:Caramelo_dog_59.jpg" className="underline underline-offset-4">
+              domínio público, via Wikimedia Commons
+            </a>
+            .
           </p>
         </div>
       </div>
