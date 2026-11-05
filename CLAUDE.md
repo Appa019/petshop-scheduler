@@ -24,6 +24,8 @@
 - Motion variants compartilhadas em `frontend/src/lib/motion.js` (pageVariants, listContainer, listItem)
 - SEM glass-morphism, backdrop-blur, ou border-radius pill (exceto avatares)
 - Classe `glass-card` mantida no nome mas restyled (solid surface, sem blur)
+- Landing (`landing/`) tem visual próprio: fundo #FFFFFF, Archivo, um acento verde #0A6B4B (tokens em `.landing` no `landing/src/index.css`); Fraunces/Outfit e as classes lavanda ficam só para os slides da apresentação
+- Telas do app na landing (`landing/public/screens/`) são renders do build real com pet de exemplo e API mockada
 
 ## Estrutura
 - `supabase/functions/` — Edge Functions (Deno/TS)
